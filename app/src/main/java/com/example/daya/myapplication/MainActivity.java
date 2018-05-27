@@ -70,13 +70,13 @@ public static MainActivity ma;
                             case 0:
                                 Intent i = new Intent(getApplicationContext(),LihatBiodata.class);
                                 i.putExtra("nama",selection);
-                                startActivities(i);
+                                //startActivities(i);
                                 break;
 
                             case 1:
                                 Intent in = new Intent(getApplicationContext(),UpdateBiodata.class);
                                 in.putExtra("nama",selection);
-                                startActivities(i);
+                                //startActivities(in);
 
                             case 2:
                                 SQLiteDatabase db = dbcenter.getWritableDatabase();
