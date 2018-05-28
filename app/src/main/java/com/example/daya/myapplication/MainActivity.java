@@ -70,13 +70,13 @@ public static MainActivity ma;
                             case 0:
                                 Intent i = new Intent(getApplicationContext(),LihatBiodata.class);
                                 i.putExtra("nama",selection);
-                                //startActivities(i);
+                                startActivities(new Intent[]{i});
                                 break;
 
                             case 1:
                                 Intent in = new Intent(getApplicationContext(),UpdateBiodata.class);
                                 in.putExtra("nama",selection);
-                                //startActivities(in);
+                                startActivities(new Intent[]{in});
 
                             case 2:
                                 SQLiteDatabase db = dbcenter.getWritableDatabase();
@@ -89,7 +89,10 @@ public static MainActivity ma;
                 });
                     builder.create().show();
             }
+
+
         });
         ((ArrayAdapter)ListView01.getAdapter()).notifyDataSetChanged();
     }
+
 }
